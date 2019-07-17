@@ -137,6 +137,8 @@ table {
 
 /* Set every element's box-sizing to border-box */
 @backgroundRed: rgb(255, 255, 255);
+@headerFont:'Literata', serif;
+@bodyFont:'Montserrat', sans-serif;
 
 * {
 	box-sizing: border-box;
@@ -145,6 +147,31 @@ table {
 html,
 body {
 	height: 100%;
-	background-color: @backgroundRed
+	background-image:url("/Images/Derek\ with\ Camera.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
 }
 
+h1, h2, h3, h4, h5, h6{
+	font-family:@headerFont;
+}
+
+header{
+	background: white;
+
+	a{
+		text-decoration: none;
+		font-family: @headerFont;
+		display:flex;
+		align-items: center;
+		justify-content: space-around;
+		width:100%;
+		margin: 0 auto;
+	}
+}
+
+.container{
+	font-family: @bodyFont;
+
+}
