@@ -1,59 +1,176 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import "variables";
+@import "mixins";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+@import "reset";
+
+@import "general-styles";
+@import "nav-bar";
+
+/* top content */
+
+/*about me*/
+.top-content {
+	margin: 0 0 5rem 3rem;
+	padding-top: 30%;
+	width: 40%;
+	height: 40%;
+
+	.word-box {
+		background: @backgroundWhite;
+		padding: 2rem 5rem 2rem 1rem;
+		border-radius: .75rem;
+	}
+
+	h1 {
+		border-bottom: 1px solid @headerColor;
+		width: 40%;
+		line-height: 1.5;
+	}
+
+	.visit {
+		.buttonStyle()
+	}
+
+	@media screen and(max-width:600px) {
+		margin: 0;
+		width: 100%;
+	}
+
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+.main-content {
+	font-family: @bodyFont;
 }
 
-html, body {
-    height: 100%;
+.middle-content {
+	padding: 3rem 0 0 0;
+	background: white;
+
+	.list {
+		h2 {
+			padding: 0 0 1rem;
+		}
+
+		display: flex;
+		width: 90%;
+		margin: 0 auto;
+		padding:0 0 1rem;
+		align-items: center;
+
+		@media screen and (max-width:600px) {
+			flex-direction: column;
+			padding: 4rem 0;
+			margin: auto;
+
+			.cont {
+				padding: 3rem;
+			}
+		}
+	}
+
+
 }
 
+.exp {
+	width: 90%;
+	margin: 0 auto;
+	border-top: 1px dashed black;
+	padding: 1rem 0 10rem;
+
+	.title {
+		.titlestyle();
+		margin: 0 0 1rem;
+	}
+
+	.mediabox {
+
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 auto;
+		padding: 1rem 0 2rem;
+
+	}
+
+	.mediaLeft {
+		width: 30%;
+
+	}
+
+	.mediaBody {
+		width: 70%;
+		line-height: 1.5;
+	}
+
+
+}
+
+/*footer*/
+
+input[type=text],
+select,
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+input[type=submit] {
+	background-color: @headerColor;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: @headerColor;
+}
+
+footer {
+	font-family: @bodyFont;
+
+	#message {
+		text-align: center;
+	}
+
+	.container {
+		border-radius: 5px;
+		background-color: @backgroundWhite;
+	}
+
+	.column {
+		float: left;
+		width: 50%;
+		margin-top: 6px;
+		padding: 20px;
+	}
+
+	.whale {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	@media screen and (max-width: 600px) {
+
+		.whale {
+			display: none;
+		}
+
+		.column,
+		input[type=submit] {
+			width: 100%;
+			margin-top: 0;
+		}
+	}
+}
