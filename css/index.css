@@ -127,6 +127,8 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+/*tasty Mixins*/
+/*start*/
 * {
   box-sizing: border-box;
 }
@@ -143,7 +145,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+th,
+p {
   font-family: 'Literata', serif;
 }
 h1 {
@@ -189,17 +193,13 @@ header a {
 header a:hover {
   color: #66cc99;
 }
-@media screen and (max-width: 500px) {
-  header {
-    border: 1px solid red;
+@media screen and (max-width: 600px) {
+  header .navBar {
+    flex-direction: column;
   }
 }
 /*about me*/
 /* top content */
-.spaceholder {
-  width: 100%;
-  border: 1px solid orange;
-}
 .top-content {
   margin: 0 0 5rem 3rem;
   padding-top: 30%;
@@ -216,6 +216,14 @@ header a:hover {
   width: 40%;
   line-height: 1.5;
 }
+.top-content .visit {
+  text-decoration: none;
+  background-color: #5E5D5D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
 @media screen and (max-width: 600px) {
   .top-content {
     margin: 0;
@@ -226,15 +234,34 @@ header a:hover {
   font-family: 'Montserrat', sans-serif;
 }
 .middle-content {
-  /*border: 1px solid red;*/
-  padding: 2rem 0 0 0;
+  padding: 3rem 0 0 0;
   background: white;
+}
+.middle-content .list {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 0 1rem;
+  align-items: center;
+}
+.middle-content .list h2 {
+  padding: 0 0 1rem;
+}
+@media screen and (max-width: 600px) {
+  .middle-content .list {
+    flex-direction: column;
+    padding: 4rem 0;
+    margin: auto;
+  }
+  .middle-content .list .cont {
+    padding: 3rem;
+  }
 }
 .exp {
   width: 90%;
-  margin: 0 auto;
-  border-top: 1px solid black;
-  padding: 3rem 0;
+  margin: 0 auto ;
+  border-top: 1px dashed black;
+  padding: 1rem 0 10rem;
 }
 .exp .title {
   border-bottom: 4px solid #5E5D5D;
@@ -275,6 +302,9 @@ input[type=submit] {
 }
 input[type=submit]:hover {
   background-color: #5E5D5D;
+}
+footer {
+  font-family: 'Montserrat', sans-serif;
 }
 footer #message {
   text-align: center;
