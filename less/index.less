@@ -1,269 +1,14 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import "variables";
+@import "mixins";
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+@import "reset";
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
-}
-
-body {
-	line-height: 1;
-}
-
-ol,
-ul {
-	list-style: none;
-}
-
-blockquote,
-q {
-	quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Set every element's box-sizing to border-box */
-@backgroundWhite: rgb(255, 255, 255);
-
-@headerFont: 'Literata', serif;
-@headerColor: #5E5D5D;
-
-@bodyFont: 'Montserrat', sans-serif;
-
-/*tasty Mixins*/
-.hoverMixin() {
-	&:hover {
-		color: #66cc99;
-	}
-}
-
-.titlestyle() {
-	border-bottom: 4px solid @headerColor;
-	line-height: 4rem;
-	border-width: auto;
-}
-
-.buttonStyle() {
-	text-decoration: none;
-	background-color: @headerColor;
-	color: white;
-	padding: 12px 20px;
-	border: none;
-	cursor: pointer;
-}
-
-/*start*/
-* {
-	box-sizing: border-box;
-}
-
-
-
-html,
-body {
-	height: 100%;
-	background: url("/Images/Derek\ with\ Camera.png");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-th,
-p {
-	font-family: @headerFont;
-
-}
-
-h1 {
-	color: @headerColor;
-	font-size: 2rem;
-}
-
-h2 {
-	color: @headerColor;
-	font-size: 1.4rem;
-}
-
-h3 {
-	color: @headerColor;
-	font-size: 1.1rem;
-}
-
-
-
-/* header */
-
-
-header {
-	background: white;
-	position: fixed;
-	width: 100%;
-
-	.container {
-		display: flex;
-		align-items: center;
-		margin: 1rem 1rem;
-
-	}
-
-
-	.logo {
-		width: 60%;
-		margin: 0 auto;
-		float: left;
-	}
-
-	.navBar {
-		display: flex;
-		width: 100%;
-		justify-content: flex-end;
-
-	}
-
-	a {
-		text-decoration: none;
-		font-family: @headerFont;
-		color: @headerColor;
-		font-size: 1.5rem;
-		padding: 0 1.5rem;
-		.hoverMixin ()
-	}
-
-	@media screen and(max-width:600px) {
-		.navBar{
-			flex-direction: column;
-		}
-
-	}
-
-}
-
-/*about me*/
-
+@import "general-styles";
+@import "nav-bar";
 
 /* top content */
 
-
-
+/*about me*/
 .top-content {
 	margin: 0 0 5rem 3rem;
 	padding-top: 30%;
@@ -302,8 +47,8 @@ header {
 	background: white;
 
 	.list {
-		h2{
-			padding:0 0 1rem;
+		h2 {
+			padding: 0 0 1rem;
 		}
 
 		display: flex;
@@ -328,7 +73,7 @@ header {
 
 .exp {
 	width: 90%;
-	margin: 0 auto ;
+	margin: 0 auto;
 	border-top: 1px dashed black;
 	padding: 1rem 0 10rem;
 

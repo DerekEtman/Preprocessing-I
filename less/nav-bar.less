@@ -1,0 +1,46 @@
+/* header */
+
+
+header {
+	background: white;
+	position: fixed;
+	width: 100%;
+
+	.container {
+		display: flex;
+		align-items: center;
+		margin: 1rem 1rem;
+
+	}
+
+
+	.logo {
+		width: 60%;
+		margin: 0 auto;
+		float: left;
+	}
+
+	.navBar {
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+
+	}
+
+	a {
+		text-decoration: none;
+		font-family: @headerFont;
+		color: @headerColor;
+		font-size: 1.5rem;
+		padding: 0 1.5rem;
+		.hoverMixin ()
+	}
+
+	@media screen and(max-width:600px) {
+		.navBar{
+			flex-direction: column;
+		}
+
+	}
+
+}

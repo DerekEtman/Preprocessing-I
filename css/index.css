@@ -126,12 +126,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* Set every element's box-sizing to border-box */
-/*tasty Mixins*/
-/*start*/
-* {
-  box-sizing: border-box;
-}
 html,
 body {
   height: 100%;
@@ -161,6 +155,9 @@ h2 {
 h3 {
   color: #5E5D5D;
   font-size: 1.1rem;
+}
+* {
+  box-sizing: border-box;
 }
 /* header */
 header {
@@ -198,8 +195,8 @@ header a:hover {
     flex-direction: column;
   }
 }
-/*about me*/
 /* top content */
+/*about me*/
 .top-content {
   margin: 0 0 5rem 3rem;
   padding-top: 30%;
@@ -259,7 +256,7 @@ header a:hover {
 }
 .exp {
   width: 90%;
-  margin: 0 auto ;
+  margin: 0 auto;
   border-top: 1px dashed black;
   padding: 1rem 0 10rem;
 }
