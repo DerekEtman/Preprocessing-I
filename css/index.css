@@ -147,10 +147,16 @@ h6 {
   font-family: 'Literata', serif;
 }
 h1 {
+  color: #5E5D5D;
   font-size: 2rem;
 }
 h2 {
-  font-size: 1.5rem;
+  color: #5E5D5D;
+  font-size: 1.4rem;
+}
+h3 {
+  color: #5E5D5D;
+  font-size: 1.1rem;
 }
 /* header */
 header {
@@ -183,20 +189,71 @@ header a {
 header a:hover {
   color: #66cc99;
 }
+@media screen and (max-width: 500px) {
+  header {
+    border: 1px solid red;
+  }
+}
 /*about me*/
 /* top content */
+.spaceholder {
+  width: 100%;
+  border: 1px solid orange;
+}
 .top-content {
-  padding-top: 40%;
+  margin: 0 0 5rem 3rem;
+  padding-top: 30%;
   width: 40%;
   height: 40%;
+}
+.top-content .word-box {
+  background: #ffffff;
+  padding: 2rem 5rem 2rem 1rem;
+  border-radius: 0.75rem;
+}
+.top-content h1 {
+  border-bottom: 1px solid #5E5D5D;
+  width: 40%;
+  line-height: 1.5;
+}
+@media screen and (max-width: 600px) {
+  .top-content {
+    margin: 0;
+    width: 100%;
+  }
 }
 .main-content {
   font-family: 'Montserrat', sans-serif;
 }
 .middle-content {
+  /*border: 1px solid red;*/
   padding: 2rem 0 0 0;
-  border: 1px solid red;
   background: white;
+}
+.exp {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid black;
+  padding: 3rem 0;
+}
+.exp .title {
+  border-bottom: 4px solid #5E5D5D;
+  line-height: 4rem;
+  border-width: auto;
+  margin: 0 0 1rem;
+}
+.exp .mediabox {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+.exp .mediaLeft {
+  width: 30%;
+}
+.exp .mediaBody {
+  width: 70%;
+  line-height: 1.5;
 }
 /*footer*/
 input[type=text],
@@ -243,6 +300,9 @@ footer .row:after {
   clear: both;
 }
 @media screen and (max-width: 600px) {
+  footer .whale {
+    display: none;
+  }
   footer .column,
   footer input[type=submit] {
     width: 100%;

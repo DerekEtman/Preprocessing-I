@@ -144,13 +144,21 @@ table {
 @bodyFont: 'Montserrat', sans-serif;
 
 .hoverMixin() {
-&:hover {
-	color: #66cc99;
+	&:hover {
+		color: #66cc99;
+	}
 }
+
+.titlestyle() {
+	border-bottom: 4px solid @headerColor;
+	line-height: 4rem;
+	border-width: auto;
 }
 * {
 	box-sizing: border-box;
 }
+
+
 
 html,
 body {
@@ -172,11 +180,16 @@ h6 {
 }
 
 h1 {
+	color:@headerColor;
 	font-size: 2rem;
 }
-
 h2 {
-	font-size: 1.5rem;
+	color:@headerColor;
+	font-size: 1.4rem;
+}
+h3{
+	color:@headerColor;
+	font-size: 1.1rem;
 }
 
 
@@ -219,15 +232,44 @@ header {
 		.hoverMixin ()
 	}
 
+	@media screen and(max-width:500px) {
+		border:1px solid red;
+		
+	}
+
 }
 /*about me*/
 
 
 /* top content */
+
+.spaceholder{
+	width:100%;
+	border:1px solid orange;
+}
 .top-content{
-	padding-top:40%;
+	margin: 0 0 5rem 3rem;
+	padding-top: 30%;
 	width:40%;
-	height:40%;
+	height:40%; 
+
+	.word-box{
+		background:@backgroundWhite;
+		padding:2rem 5rem 2rem 1rem;
+		border-radius: .75rem;
+	}
+
+	h1{
+		border-bottom: 1px solid @headerColor;
+		width:40%;
+		line-height: 1.5;
+	}
+	
+	@media screen and(max-width:600px) {
+		margin:0;
+		width:100%;
+	}
+
 }
 
 .main-content {
@@ -235,14 +277,46 @@ header {
 }
 
 .middle-content {
+	/*border: 1px solid red;*/
 	padding:2rem 0 0 0;
-	border: 1px solid red;
 	background: white;
 
 
+
+
 }
+.exp{
+	width:90%;
+	margin:0 auto;
+	border-top: 1px solid black;
+	padding:3rem 0;
+
+	.title{
+		.titlestyle();
+		margin:0 0 1rem;
+	}
+
+	.mediabox{
+		
+		display:flex;
+		flex-flow: row wrap;
+		margin:0 auto;
+		padding:1rem 0 2rem;
+
+	}
+
+	.mediaLeft{
+		width:30%;
+		
+	}
+
+	.mediaBody{
+		width:70%;
+		line-height: 1.5;
+	}
 
 
+}
 
 /*footer*/
 
@@ -301,6 +375,10 @@ footer {
 	}
 
 	@media screen and (max-width: 600px) {
+
+		.whale{
+			display: none;
+		}
 
 		.column, input[type=submit] {
 			width: 100%;
