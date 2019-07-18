@@ -133,7 +133,7 @@ table {
 html,
 body {
   height: 100%;
-  background-image: url("/Images/Derek\ with\ Camera.png");
+  background: url("/Images/Derek\ with\ Camera.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
@@ -152,41 +152,50 @@ h1 {
 h2 {
   font-size: 1.5rem;
 }
+/* header */
 header {
   background: white;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  padding: 30px 0 30px;
 }
 header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-header .row {
-  display: flex;
-  flex-wrap: wrap;
+  margin: 1rem 1rem;
 }
 header .logo {
-  height: 5rem;
+  width: 60%;
   margin: 0 auto;
   float: left;
+}
+header .navBar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 header a {
   text-decoration: none;
   font-family: 'Literata', serif;
   color: #5E5D5D;
   font-size: 1.5rem;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  margin: 0 auto;
+  padding: 0 1.5rem;
 }
+header a:hover {
+  color: #66cc99;
+}
+/*about me*/
 /* top content */
+.top-content {
+  padding-top: 40%;
+  width: 40%;
+  height: 40%;
+}
 .main-content {
   font-family: 'Montserrat', sans-serif;
 }
-.main-content .top-content {
+.middle-content {
+  padding: 2rem 0 0 0;
+  border: 1px solid red;
   background: white;
 }
 /*footer*/
@@ -215,7 +224,7 @@ footer #message {
 }
 footer .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 }
 footer .column {
   float: left;
